@@ -1,0 +1,268 @@
+*{
+    margin-bottom: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans;
+}
+
+.rules_section{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 540px;
+    background: rgb(123, 193, 230);
+    color: #ffffff;
+    border-radius: 10px;
+}
+.rules_section .rules_title{
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.rules_section .rules_list{
+    padding: 15px 35px;
+}
+.rules_section .rules_list .rules{
+    margin: 5px 0;
+    font-size: 17px;
+}
+ .rules_list .rules span{
+    font-weight: 600;
+    color: #f4ff20;
+}
+ .rules_section .rules_buttons{
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 35px;
+      border-top: 1px solid #ffffff;
+}
+
+.rules_section .rules_buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color:rgb(123, 193, 230);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.rules_buttons button.quit{
+    color: rgb(255, 3, 3);
+    border-color: #ff0000;
+}
+.rules_buttons button.quit:hover{
+    background: red;
+    color: #ffffff;
+}
+.rules_buttons button.play{
+    background-color: rgb(11, 179, 31);
+    color: #ffffff;
+}
+
+.rules_buttons button.play:hover{
+    background: #0dff00;
+}
+/**----Rules section ends here-----*/
+
+
+.Quiz-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: rgb(123, 193, 230);
+    color: #ffffff;
+    border-radius: 10px;
+    
+}
+
+.Quiz-container header{
+    position: relative;
+    z-index: 90;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(1, 0, 0, 0.1);
+
+}
+
+/*----------ProgressBar starts---------*/
+.Quiz-container header #progressBar{
+    width: 15rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223, 36);
+    margin-top: 1rem;
+    border-radius: 50px;
+    overflow: hidden;
+    background: white;
+}
+
+.Quiz-container header #progressBar #progressBarFull{
+    height: 100%;
+    background-color: rgba(11,223, 36);
+    width: 0%;
+}
+
+/*-----display title--------*/
+.Quiz-container header .display_title{
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, rgb(255, 255, 255)), color-stop(0.3, rgb(255, 0, 0)), color-stop(0.45, rgb(255, 255, 255)), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    font-weight: 800;
+    color: grad;
+}
+
+.Quiz-container header #timer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12rem;
+    height: 3rem;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(247, 15, 15);
+    color: rgb(247, 15, 15);
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.Quiz-container header #timer .time-left{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.Quiz-container header #timer .time-sec{
+    font-size: 15px;
+    font-weight: 400;
+    width: 2rem;
+    background:  rgb(255, 15, 15);
+    color:white;
+    border-radius: 5px;
+}
+
+
+/*-------main--------*/
+.Quiz-container main{
+    padding: 25px 30px 20px 30px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.Quiz-container main #question{
+    font-size:25px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.Quiz-container main .option-container{
+    padding:1px 0;
+    display: block;
+    display: flex;
+    align-items: center;
+    background: rgb(23, 4, 148);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.Quiz-container main .option-container #option-prefix{
+    padding: 2px;
+}
+
+main .option-container:hover{
+    background: rgb(13, 170, 255);
+    color: #ffffff;
+}
+
+.option-container #question:last-child{
+    margin-bottom: 0px;
+}
+
+/*--------Footer----------*/
+.Quiz-container footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Quiz-container footer .total span {
+    display: flex;
+    user-select: none;
+}
+footer .total span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+.total span p:first-child{
+    padding-left: 0px;
+}
+
+footer.total .display-item .display-prefix, .display-main-text{
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+}
+
+footer .next_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid;
+    outline: none;
+    color: #f9fcff;
+    border-color: white;
+    border-radius: 5px;
+    background: rgb(18, 7, 121);
+    transition: all 0.3s ease;
+}
+footer .next_btn:hover{
+    background-color: rgb(53, 53, 199);
+    color: white;
+}
+
+/*------Rights or wrong------*/
+.right{
+    background-color: rgb(144, 218, 33);
+}
+
+.wrong{
+    background-color: rgb(247, 15, 15);
+}
+
+
+
+
+
+

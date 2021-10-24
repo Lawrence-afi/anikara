@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>morepages</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/bootstrap.css"">
+	<style>	
+	.spinner{
+	width: 30vh;
+	height: 30vh;
+	border-top: 10px solid white;
+	border-left: 10px solid teal;
+	border-right: 10px solid teal;
+	border-bottom: 10px solid teal;
+	border-radius: 100%;
+	animation-name: spinner;
+	animation-delay: 0s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	margin: 35vh auto;
+	z-index: -1000;
+	}
+	p{
+	margin: -35vh auto;
+	font-family: monospace;
+	z-index: 1000;
+	text-align: center;
+	}
+
+	
+	@keyframes spinner{
+	from{
+	transform: rotate(0deg);
+	}
+	to{
+	transform: rotate(360deg);
+	}
+	}
+	.navbar{
+	position: sticky;
+	top: 0%;
+	z-index:100;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+
+	<nav class="navbar navbar-default text-center " style="background-color: white; color: black;">
+	<div class="container">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+	<span class="icon-bar"></span>
+
+	<span class="icon-bar"></span>
+
+	<span class="icon-bar"></span>
+	</button>
+
+<img class="navbar-brand" src="logolaw.png">
+	</div>
+	
+	<div class="collapse navbar-collapse" id="myNavbar">
+	<ul class="nav navbar-nav ">
+	<li class="active"><a><span class="glyphicon glyphicon-home"></span></a></li>
+	<li><a>portfolio</a></li> 
+	<li class="dropdown"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">more <span class="caret"></span></a>
+<ul class="dropdown-menu text-capitalize">
+<li ><a href="#">more about me</a></li>
+<li class="divider" ></li>
+<li><a href="#">more about what i do </a></li>
+<li class="divider" ></li>
+<li><a href="#">more about my skills</a></li>
+</ul>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<a class="btn btn-default navbar-btn" href="contact.html">Contact me</a>
+</ul>
+</div>
+	</div>
+	
+</nav>
+
+	<div class="spinner">
+	</div>
+	<p>loading page content</p>
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
